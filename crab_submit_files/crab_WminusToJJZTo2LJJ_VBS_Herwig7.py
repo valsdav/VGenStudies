@@ -9,7 +9,7 @@ config.General.transferLogs = True
 config.JobType.pluginName = 'PrivateMC'
 config.JobType.psetName = '../configs/WminusToJJZTo2LJJ_VBS_Herwig7.py'
 config.JobType.allowUndistributedCMSSW = True
-config.JobType.numCores = 2
+config.JobType.numCores = 1
 
 config.Data.outputPrimaryDataset = 'WminusToJJZTo2LJJ_VBS_Herwig7'
 config.Data.splitting = 'EventBased'

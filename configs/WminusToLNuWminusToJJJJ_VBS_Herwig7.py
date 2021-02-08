@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/VGenStudies/python/WminusToLNuWminusToJJJJ_VBS_Herwig7.py --fileout file:test --mc --eventcontent NANOAODGEN --datatier NANOAOD --conditions auto:mc --step LHE,GEN,NANOGEN --python_filename configs/WminusToLNuWminusToJJJJ_VBS_Herwig7.py --customise_commands process.RandomNumberGeneratorService.externalLHEProducer.initialSeed=999\nprocess.externalLHEProducer.generateConcurrently=True --nThreads 2 -n 30 --no_exec
+# with command line options: Configuration/VGenStudies/python/WminusToLNuWminusToJJJJ_VBS_Herwig7.py --fileout file:WminusToLNuWminusToJJJJ_VBS_Herwig7.root --mc --eventcontent NANOAODGEN --datatier NANOAOD --conditions auto:mc --step LHE,GEN,NANOGEN --python_filename configs/WminusToLNuWminusToJJJJ_VBS_Herwig7.py --customise_commands process.RandomNumberGeneratorService.externalLHEProducer.initialSeed=999 -n 30 --no_exec
 import FWCore.ParameterSet.Config as cms
 
 
@@ -25,7 +25,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(30)
+    input = cms.untracked.int32(500)
 )
 
 # Input source
@@ -37,7 +37,7 @@ process.options = cms.untracked.PSet(
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
-    annotation = cms.untracked.string('Configuration/VGenStudies/python/WminusToLNuWminusToJJJJ_VBS_Herwig7.py nevts:30'),
+    annotation = cms.untracked.string('Configuration/VGenStudies/python/WminusToLNuWminusToJJJJ_VBS_Herwig7.py nevts:500'),
     name = cms.untracked.string('Applications'),
     version = cms.untracked.string('$Revision: 1.19 $')
 )
@@ -194,7 +194,7 @@ process.generator = cms.EDFilter("Herwig7GeneratorFilter",
 process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
     args = cms.vstring('/cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.4.2/VVjj_SemiLeptonic/WMlepWMhadJJ_EWK_LO_SM_mjj100_pTj10_slc6_amd64_gcc481_CMSSW_7_1_30_tarball.tar.xz'),
     generateConcurrently = cms.untracked.bool(False),
-    nEvents = cms.untracked.uint32(30),
+    nEvents = cms.untracked.uint32(500),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
     scriptName = cms.FileInPath('GeneratorInterface/LHEInterface/data/run_generic_tarball_cvmfs.sh')
@@ -215,11 +215,6 @@ process.NANOAODGENoutput_step = cms.EndPath(process.NANOAODGENoutput)
 process.schedule = cms.Schedule(process.lhe_step,process.generation_step,process.genfiltersummary_step,process.nanoAOD_step,process.endjob_step,process.NANOAODGENoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
-
-#Setup FWK for multithreaded
-process.options.numberOfThreads=cms.untracked.uint32(2)
-process.options.numberOfStreams=cms.untracked.uint32(0)
-process.options.numberOfConcurrentLuminosityBlocks=cms.untracked.uint32(1)
 # filter all path with the production filter sequence
 for path in process.paths:
 	if path in ['lhe_step']: continue
@@ -238,7 +233,6 @@ process = customizeNanoGEN(process)
 # Customisation from command line
 
 process.RandomNumberGeneratorService.externalLHEProducer.initialSeed=999
-process.externalLHEProducer.generateConcurrently=True
 # Add early deletion of temporary data products to reduce peak memory need
 from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
 process = customiseEarlyDelete(process)
