@@ -10,6 +10,7 @@ config.JobType.pluginName = 'PrivateMC'
 config.JobType.psetName = '../configs/WplusToLNuZToJJJJ_VBS_Herwig7.py'
 config.JobType.allowUndistributedCMSSW = True
 config.JobType.numCores = 1
+config.JobType.eventsPerLumi = 5000
 
 config.Data.outputPrimaryDataset = 'WplusToLNuZToJJJJ_VBS_Herwig7'
 config.Data.splitting = 'EventBased'

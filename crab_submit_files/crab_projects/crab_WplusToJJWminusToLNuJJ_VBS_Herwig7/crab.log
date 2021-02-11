@@ -1,0 +1,140 @@
+DEBUG 2021-02-11 13:00:14.057 UTC: 	 CRAB Client version: v3.201110
+DEBUG 2021-02-11 13:00:14.058 UTC: 	 Running on: Linux lxplus703.cern.ch 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2021-02-11 13:00:14.058 UTC: 	 Executing command: 'submit'
+DEBUG 2021-02-11 13:00:14.058 UTC: 	 Found CRAB cache file /afs/cern.ch/user/d/dvalsecc/.crab3
+INFO 2021-02-11 13:00:14.059 UTC: 	 Will use CRAB configuration file crab_WplusToJJWminusToLNuJJ_VBS_Herwig7.py
+DEBUG 2021-02-11 13:00:14.059 UTC: 	 Loading CRAB configuration file.
+DEBUG 2021-02-11 13:00:14.305 UTC: 	 Will use CRAB PrivateMC plugin (i.e. will run a MC generation job type).
+DEBUG 2021-02-11 13:00:14.464 UTC: 	 Checking credentials
+DEBUG 2021-02-11 13:00:14.464 UTC: 	 Found proxy file /tmp/x509up_u96307
+DEBUG 2021-02-11 13:00:14.465 UTC: 	 Getting proxy life time left
+DEBUG 2021-02-11 13:00:15.170 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u96307 -timeleft
+ output : 616881
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-11 13:00:15.878 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u96307 -actimeleft
+ output : 616881
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-11 13:00:15.878 UTC: 	 Proxy valid for 171:21:21 hours
+DEBUG 2021-02-11 13:00:16.785 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u96307 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-11 13:00:16.836 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+DEBUG 2021-02-11 13:00:17.550 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u96307 -identity
+ output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dvalsecc/CN=805418/CN=Davide Valsecchi
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-11 13:00:17.558 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-11 13:00:17.558 UTC: 	 using 1ce5cb5b1b07a625518d90764c8eac487e5e3e84 as credential login name
+DEBUG 2021-02-11 13:00:17.964 UTC: 	 Executing : 
+ command : myproxy-info -l 1ce5cb5b1b07a625518d90764c8eac487e5e3e84 -s myproxy.cern.ch
+ output : username: 1ce5cb5b1b07a625518d90764c8eac487e5e3e84
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dvalsecc/CN=805418/CN=Davide Valsecchi
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 643:12:57  (26.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-11 13:00:17.965 UTC: 	 Myproxy is valid: 2315577
+DEBUG 2021-02-11 13:00:17.965 UTC: 	 Retrieving username ...
+DEBUG 2021-02-11 13:00:17.965 UTC: 	 Retrieving username from CRIC...
+DEBUG 2021-02-11 13:00:18.805 UTC: 	 username is dvalsecc
+DEBUG 2021-02-11 13:00:18.815 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2021-02-11 13:00:18.815 UTC: 	 using dvalsecc_CRAB as credential login name
+DEBUG 2021-02-11 13:00:19.121 UTC: 	 Executing : 
+ command : myproxy-info -l dvalsecc_CRAB -s myproxy.cern.ch
+ output : username: dvalsecc_CRAB
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dvalsecc/CN=805418/CN=Davide Valsecchi
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch
+  timeleft: 643:12:59  (26.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2021-02-11 13:00:19.121 UTC: 	 Myproxy is valid: 2315579
+DEBUG 2021-02-11 13:00:19.121 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 1ce5cb5b1b07a625518d90764c8eac487e5e3e84  - validity: 26 days, 19:12:57
+  Credential exists on myproxy: username: dvalsecc_CRAB  - validity: 26 days, 19:12:59
+DEBUG 2021-02-11 13:00:19.121 UTC: 	 Command use: submit
+DEBUG 2021-02-11 13:00:19.121 UTC: 	 Options use: ['crab_WplusToJJWminusToLNuJJ_VBS_Herwig7.py']
+DEBUG 2021-02-11 13:00:19.201 UTC: 	 CRABClient version: v3.201110
+DEBUG 2021-02-11 13:00:19.201 UTC: 	 Instance is prod
+DEBUG 2021-02-11 13:00:19.201 UTC: 	 Server base url is cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-11 13:00:19.201 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2021-02-11 13:00:19.201 UTC: 	 Started submission
+DEBUG 2021-02-11 13:00:19.201 UTC: 	 Working on /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/VGenStudies/crab_submit_files/crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7
+DEBUG 2021-02-11 13:00:19.310 UTC: 	 Loading required information from the environment
+DEBUG 2021-02-11 13:00:19.311 UTC: 	 Found CMSSW_10_6_20_patch1 for slc7_amd64_gcc700 with base /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1
+DEBUG 2021-02-11 13:00:19.311 UTC: 	 UNIQUE NAME: tarUUID 02412339-de57-4881-baa4-cb2a878ba2d4 
+DEBUG 2021-02-11 13:00:19.311 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_projects'
+config.General.requestName = 'WplusToJJWminusToLNuJJ_VBS_Herwig7'
+config.section_('JobType')
+config.JobType.psetName = '../configs/WplusToJJWminusToLNuJJ_VBS_Herwig7.py'
+config.JobType.pluginName = 'PrivateMC'
+config.JobType.numCores = 1
+config.JobType.allowUndistributedCMSSW = True
+config.JobType.eventsPerLumi = 5000
+config.section_('Data')
+config.Data.outputDatasetTag = 'RunIISummer15wmLHEGS'
+config.Data.publication = False
+config.Data.unitsPerJob = 5000
+config.Data.splitting = 'EventBased'
+config.Data.outLFNDirBase = '/store/group/phys_smp/VJets_NLO_VBSanalyses/Samples/NanoGEN'
+config.Data.outputPrimaryDataset = 'WplusToJJWminusToLNuJJ_VBS_Herwig7'
+config.Data.totalUnits = 150000
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2021-02-11 13:00:19.311 UTC: 	 self.config.JobType.psetName: ../configs/WplusToJJWminusToLNuJJ_VBS_Herwig7.py
+INFO 2021-02-11 13:00:19.311 UTC: 	 Importing CMSSW configuration ../configs/WplusToJJWminusToLNuJJ_VBS_Herwig7.py
+INFO 2021-02-11 13:00:22.292 UTC: 	 Finished importing CMSSW configuration ../configs/WplusToJJWminusToLNuJJ_VBS_Herwig7.py
+DEBUG 2021-02-11 13:00:22.293 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/VGenStudies/crab_submit_files/crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7/inputs/PSet.py
+DEBUG 2021-02-11 13:00:23.128 UTC: 	 The following EDM output files will be collected: ['WplusToJJWminusToLNuJJ_VBS_Herwig7.root']
+DEBUG 2021-02-11 13:00:23.128 UTC: 	 The following TFile output files will be collected: []
+DEBUG 2021-02-11 13:00:23.128 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2021-02-11 13:00:23.128 UTC: 	 Loading required information from the environment
+DEBUG 2021-02-11 13:00:23.128 UTC: 	 Found CMSSW_10_6_20_patch1 for slc7_amd64_gcc700 with base /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1
+DEBUG 2021-02-11 13:00:23.128 UTC: 	 Making tarball in /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/VGenStudies/crab_submit_files/crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7/inputs/02412339-de57-4881-baa4-cb2a878ba2d4default.tgz
+DEBUG 2021-02-11 13:00:23.129 UTC: 	 Checking directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/lib
+DEBUG 2021-02-11 13:00:23.130 UTC: 	 Adding directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/lib to tarball
+DEBUG 2021-02-11 13:00:23.140 UTC: 	 Checking directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/biglib
+DEBUG 2021-02-11 13:00:23.140 UTC: 	 Adding directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/biglib to tarball
+DEBUG 2021-02-11 13:00:23.141 UTC: 	 Checking directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/module
+DEBUG 2021-02-11 13:00:23.162 UTC: 	 Adding data directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/Generator/data to tarball
+DEBUG 2021-02-11 13:00:23.186 UTC: 	 Adding data directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/PyReleaseValidation/data to tarball
+DEBUG 2021-02-11 13:00:23.190 UTC: 	 Adding data directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/SVSuite/data to tarball
+DEBUG 2021-02-11 13:00:23.191 UTC: 	 Adding data directory /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/Skimming/interface to tarball
+DEBUG 2021-02-11 13:00:23.663 UTC: 	 Uploading archive /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/VGenStudies/crab_submit_files/crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7/inputs/02412339-de57-4881-baa4-cb2a878ba2d4default.tgz (346 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch:8443/crabcache
+DEBUG 2021-02-11 13:00:24.284 UTC: 	 Loading required information from the environment
+DEBUG 2021-02-11 13:00:24.285 UTC: 	 Found CMSSW_10_6_20_patch1 for slc7_amd64_gcc700 with base /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1
+DEBUG 2021-02-11 13:00:24.285 UTC: 	 Making tarball in /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/VGenStudies/crab_submit_files/crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7/inputs/debugFiles.tgz
+DEBUG 2021-02-11 13:00:24.294 UTC: 	 Uploading archive /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/VGenStudies/crab_submit_files/crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7/inputs/debugFiles.tgz (3 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch:8443/crabcache
+DEBUG 2021-02-11 13:00:24.386 UTC: 	 Result uploading input files: 991b3b25166be357e6435e8ed6035099188e4fb0680f07e9c45f12fe0fd029cf.tar.gz 
+INFO 2021-02-11 13:00:24.386 UTC: 	 Sending the request to the server at cmsweb-k8s-prod.cern.ch
+DEBUG 2021-02-11 13:00:24.386 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_CH_CERN', 'algoargs': 5000, 'cachefilename': '991b3b25166be357e6435e8ed6035099188e4fb0680f07e9c45f12fe0fd029cf.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_6_20_patch1', 'eventsperlumi': 5000, 'edmoutfiles': ['WplusToJJWminusToLNuJJ_VBS_Herwig7.root'], 'userfiles': [], 'primarydataset': 'WplusToJJWminusToLNuJJ_VBS_Herwig7', 'inputdata': '', 'lfn': '/store/group/phys_smp/VJets_NLO_VBSanalyses/Samples/NanoGEN', 'dryrun': 0, 'workflow': 'crab_WplusToJJWminusToLNuJJ_VBS_Herwig7', 'cacheurl': u'https://cmsweb.cern.ch:8443/crabcache', 'nonprodsw': 1, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': '171701e52e9de19d47ad8fcd51ee03fda25c633cb38759b5a77eaa6b4ae3e3ef.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 150000, 'splitalgo': 'EventBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'PrivateMC', 'publishname2': 'RunIISummer15wmLHEGS'} 
+DEBUG 2021-02-11 13:00:24.386 UTC: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_CH_CERN&algoargs=5000&cachefilename=991b3b25166be357e6435e8ed6035099188e4fb0680f07e9c45f12fe0fd029cf.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_6_20_patch1&eventsperlumi=5000&primarydataset=WplusToJJWminusToLNuJJ_VBS_Herwig7&inputdata=&lfn=%2Fstore%2Fgroup%2Fphys_smp%2FVJets_NLO_VBSanalyses%2FSamples%2FNanoGEN&dryrun=0&workflow=crab_WplusToJJWminusToLNuJJ_VBS_Herwig7&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%3A8443%2Fcrabcache&nonprodsw=1&oneEventMode=0&debugfilename=171701e52e9de19d47ad8fcd51ee03fda25c633cb38759b5a77eaa6b4ae3e3ef.tar.gz&saveoutput=1&publication=0&jobarch=slc7_amd64_gcc700&totalunits=150000&splitalgo=EventBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=PrivateMC&publishname2=RunIISummer15wmLHEGS&edmoutfiles=WplusToJJWminusToLNuJJ_VBS_Herwig7.root
+DEBUG 2021-02-11 13:00:24.503 UTC: 	 Result: {u'result': [{u'RequestName': u'210211_130024:dvalsecc_crab_WplusToJJWminusToLNuJJ_VBS_Herwig7'}]}
+INFO 2021-02-11 13:00:24.506 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2021-02-11 13:00:24.506 UTC: 	 Task name: 210211_130024:dvalsecc_crab_WplusToJJWminusToLNuJJ_VBS_Herwig7
+INFO 2021-02-11 13:00:24.506 UTC: 	 Project dir: crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7
+INFO 2021-02-11 13:00:24.506 UTC: 	 Please use ' crab status -d crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7 ' to check how the submission process proceeds.
+DEBUG 2021-02-11 13:00:24.506 UTC: 	 About to return
+INFO 2021-02-11 13:00:24.509 UTC: 	 Log file is /afs/cern.ch/work/d/dvalsecc/private/VBSsampleHerwig/CMSSW_10_6_20_patch1/src/Configuration/VGenStudies/crab_submit_files/crab_projects/crab_WplusToJJWminusToLNuJJ_VBS_Herwig7/crab.log

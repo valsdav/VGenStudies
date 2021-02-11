@@ -10,10 +10,12 @@ config.JobType.pluginName = 'PrivateMC'
 config.JobType.psetName = '../configs/WminusToJJZTo2LJJ_VBS_Herwig7.py'
 config.JobType.allowUndistributedCMSSW = True
 config.JobType.numCores = 1
+config.JobType.eventsPerLumi = 5000
 
 config.Data.outputPrimaryDataset = 'WminusToJJZTo2LJJ_VBS_Herwig7'
 config.Data.splitting = 'EventBased'
 config.Data.unitsPerJob = 5000
+
 NJOBS = 30  # This is not a configuration parameter, but an auxiliary variable that we use in the next line.
 config.Data.totalUnits = config.Data.unitsPerJob * NJOBS
 #config.Data.outLFNDirBase = '/store/group/cmst3/user/kelong/' 
